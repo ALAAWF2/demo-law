@@ -69,5 +69,25 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: "0px"
     });
 
-    revealElements.forEach(el => revealObserver.observe(el));
+    // Contact Form Submission
+    const contactForm = document.getElementById('consultationForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Simulation of sending
+            const btn = contactForm.querySelector('button');
+            const originalText = btn.innerText;
+
+            btn.innerText = 'جاري الإرسال...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                alert('تم استلام طلبك بنجاح! سيتواصل معك فريقنا قريباً.');
+                contactForm.reset();
+                btn.innerText = originalText;
+                btn.disabled = false;
+            }, 1500);
+        });
+    }
 });

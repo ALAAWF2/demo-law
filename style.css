@@ -550,6 +550,106 @@ footer {
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
 }
 
-.btn:active {
-    transform: scale(0.95);
+/* Testimonials Section */
+.testimonials-container {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px 5px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+}
+
+.testimonials-container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    min-width: 300px;
+    max-width: 350px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.testimonial-card i {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    opacity: 0.3;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.client-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: var(--off-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Contact Form Section */
+.contact-form-container {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.1);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    width: 100%;
+    border: none;
+    font-size: 1.1rem;
 }
