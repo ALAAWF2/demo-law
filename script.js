@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: "0px"
     });
 
+    revealElements.forEach(el => revealObserver.observe(el));
+
     // Contact Form Submission
     const contactForm = document.getElementById('consultationForm');
     if (contactForm) {
